@@ -1,6 +1,6 @@
 // --- *** ÄNDRA DETTA DATUM *** ---
 // Ange startdatumet i formatet: 'ÅÅÅÅ-MM-DD'
-const startDate = new Date('2023-01-15');
+const startDate = new Date('2025-04-08');
 // ---------------------------------
 
 function calculateTimeElapsed() {
