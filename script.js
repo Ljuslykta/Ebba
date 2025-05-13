@@ -292,7 +292,8 @@ function calculateTimeElapsed() {
     const weekDescriptionElement = document.getElementById('week-description');
 
     const weekData = pregnancyInfo.find(info => info.week === currentPregnancyWeek);
-
+    const youtubeContainer = document.getElementById('youtube-container');   // Bör finnas
+    const weekVideoElement = document.getElementById('week-video');v
 
     weekVideoElement.src = "";
     youtubeContainer.style.display = 'none';
