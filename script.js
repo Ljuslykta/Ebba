@@ -172,7 +172,7 @@ const pregnancyInfo = [
     },
     {
         week: 27,
-        title: "Vecka 27: Pumped up kicks"
+        title: "Vecka 27: Pumped up kicks",
         description: "Livmodern har vuxit så att den översta delen på livmodern nu finns mellan naveln och revbenen. Fostret är omkring 37 centimeter långt och det väger knappt ett kilo. Vissa barn kommer att födas med mycket hår, medan andra inte har något hår alls när de föds. Det finns ännu gott om plats för fostret att röra sig på. Många foster är mer vakna på kvällen. Då kan det sparka mer i magen. När fostret rör sig tränas musklerna så att det blir starkare i kroppen.Ibland går det att känna en liten fot som trycker mot magen. Det är fostret som prövar sina krafter. Du kanske kan känna hur det trycker emot när du försiktigt trycker tillbaka. Graviditeten upplevs ofta mer verklig när magen växer och det går att känna fosterrörelserna utanpå.",
         image: getImagePath(27)
     },
