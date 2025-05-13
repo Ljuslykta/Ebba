@@ -1,0 +1,45 @@
+      
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tid sedan Startdatum</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Fyller hela skärmhöjden */
+            text-align: center;
+            background-color: #f4f4f4; /* Ljusgrå bakgrund */
+            margin: 0;
+        }
+        .container {
+            background-color: #fff; /* Vit bakgrund för innehåll */
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Mjuk skugga */
+        }
+        h1 {
+            color: #333; /* Mörkgrå rubrik */
+            margin-bottom: 20px;
+        }
+        #time-elapsed {
+            font-size: 1.5em; /* Större text för resultatet */
+            color: #555; /* Mellangrå text */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tid som förflutit sedan startdatumet</h1>
+        <div id="time-elapsed">Räknar...</div>
+    </div>
+
+    <!-- Länka till JavaScript-filen -->
+    <script src="script.js"></script>
+</body>
+</html>
