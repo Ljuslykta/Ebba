@@ -28,6 +28,7 @@
         h1 {
             color: #ff69b4; /* Rosa för en "babykänsla" */
             margin-bottom: 10px;
+            /* Denna är redan centrerad p.g.a. body text-align: center */
         }
         #time-elapsed {
             font-size: 1.4em;
@@ -39,34 +40,39 @@
             border-top: 1px solid #eee;
             padding-top: 20px;
             margin-top: 20px;
-            text-align: left; /* Bättre för längre text */
+            text-align: left; /* Behåll denna för <p id="week-description"> */
         }
-        .week-info h2 {
+        .week-info h2 { /* Veckans rubrik */
             color: #4682b4; /* Stålblå */
             margin-top: 0;
+            text-align: center; /* NYTT: Centrera veckans rubrik */
         }
-        .week-info img {
+        .week-info img { /* Veckans bild */
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 15px;
             margin-bottom: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: block; /* NYTT: Gör bilden till ett blockelement */
+            margin-left: auto; /* NYTT: Centrera blockelementet */
+            margin-right: auto; /* NYTT: Centrera blockelementet */
         }
         .week-info p {
             line-height: 1.6;
             color: #444;
-            white-space: pre-line; /* Gör att \n eller faktiska radbrytningar i JS-strängar (med backticks) renderas */
+            white-space: pre-line;
         }
         .youtube-player-container {
             margin-top: 25px;
             padding-top: 20px;
             border-top: 1px dashed #ddd;
         }
-        .youtube-player-container h3 {
+        .youtube-player-container h3 { /* Rubriken för YouTube-spelaren */
             margin-top: 0;
             margin-bottom: 10px;
             color: #333;
+            text-align: center; /* NYTT: Centrera även denna rubrik */
         }
         .youtube-player-wrapper {
             position: relative;
