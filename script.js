@@ -1,6 +1,6 @@
 // --- *** ÄNDRA DETTA DATUM *** ---
 // Ange startdatumet (vanligtvis sista mensens första dag) i formatet: 'ÅÅÅÅ-MM-DD'
-const startDate = new Date('2024-01-01'); // Exempel: 1 januari 2024
+const startDate = new Date('2025-04-08'); // Exempel: 1 januari 2024
 // ---------------------------------
 
 // Funktion för att generera bildnamn enligt det nya formatet
