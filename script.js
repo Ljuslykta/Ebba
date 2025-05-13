@@ -1,56 +1,269 @@
 // --- *** ÄNDRA DETTA DATUM *** ---
 // Ange startdatumet (vanligtvis sista mensens första dag) i formatet: 'ÅÅÅÅ-MM-DD'
-const startDate = new Date('2024-04-08'); // Exempel: 1 januari 2024
+const startDate = new Date('2024-01-01'); // Exempel: 1 januari 2024
 // ---------------------------------
 
-// Information om graviditetsveckor
-// Du behöver fylla på denna lista med information för alla veckor!
-// Bilderna kan du antingen ladda upp till en 'images'-mapp i ditt repo,
-// eller länka till bilder online (se till att du har rättigheter att använda dem).
+// Funktion för att generera bildnamn enligt det nya formatet
+function getImagePath(weekNumber) {
+    const paddedWeek = weekNumber.toString().padStart(2, '0'); // Lägger till inledande nolla om < 10
+    return `images/vecka_${paddedWeek}_gravidkalender.webp`;
+}
+
+// Information om graviditetsveckor - MALL FÖR 42 VECKOR
+// Fyll i 'title' och 'description' för varje vecka.
+// Se till att du har bilder namngivna enligt formatet vecka_XX_gravidkalender.webp i en 'images'-mapp.
 const pregnancyInfo = [
     {
-        week: 1, // Vecka 1 (tekniskt sett inte gravid än, men räknas ofta från sista mens)
-        title: "Vecka 1: Förberedelser i kroppen",
-        description: "Detta är veckan för din sista menstruation innan en eventuell graviditet. Kroppen förbereder sig för ägglossning. Ännu har ingen befruktning skett.",
-        image: "images/week1.jpg" // Byt ut mot images/week1.jpg om du har en lokal bild
+        week: 1,
+        title: "Vecka 1: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 1 här. Detta är ofta veckan för sista menstruationen.]",
+        image: getImagePath(1) // "images/vecka_01_gravidkalender.webp"
     },
     {
         week: 2,
-        title: "Vecka 2: Ägglossning",
-        description: "Under denna vecka sker vanligtvis ägglossningen. Om ett ägg befruktas av en spermie är det nu det sker, oftast i slutet av veckan.",
-        image: "images/week2.jpg"
+        title: "Vecka 2: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 2 här. Ägglossning kan ske.]",
+        image: getImagePath(2)
     },
     {
         week: 3,
-        title: "Vecka 3: Befruktning och implantation",
-        description: "Om befruktning skett, börjar det befruktade ägget (zygoten) sin resa mot livmodern och delar sig snabbt. I slutet av veckan kan det implantera sig i livmoderslemhinnan. Du är nu tekniskt sett gravid!",
-        image: "images/week3.jpg"
+        title: "Vecka 3: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 3 här. Befruktning och implantation.]",
+        image: getImagePath(3)
     },
     {
         week: 4,
-        title: "Vecka 4: Embryot utvecklas",
-        description: "Embryot är nu ungefär lika stort som ett vallmofrö. Moderkakan börjar bildas. Du kanske börjar misstänka att du är gravid då mensen uteblir.",
-        image: "images/week4.jpg"
+        title: "Vecka 4: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 4 här. Embryot utvecklas, mensen kan utebli.]",
+        image: getImagePath(4)
     },
     {
         week: 5,
-        title: "Vecka 5: Hjärtat börjar slå",
-        description: "Embryot är nu ungefär 1-2 mm långt. Hjärnan, ryggmärgen och hjärtat börjar utvecklas. Små knoppar som ska bli armar och ben kan synas. Hjärtat kan börja slå denna vecka!",
-        image: "images/week5.jpg"
+        title: "Vecka 5: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 5 här. Hjärtat kan börja slå.]",
+        image: getImagePath(5)
     },
-    // --- FYLL PÅ MED FLER VECKOR HÄR ---
-    // Exempel för en senare vecka:
+    {
+        week: 6,
+        title: "Vecka 6: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 6 här.]",
+        image: getImagePath(6)
+    },
+    {
+        week: 7,
+        title: "Vecka 7: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 7 här.]",
+        image: getImagePath(7)
+    },
+    {
+        week: 8,
+        title: "Vecka 8: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 8 här.]",
+        image: getImagePath(8)
+    },
+    {
+        week: 9,
+        title: "Vecka 9: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 9 här.]",
+        image: getImagePath(9)
+    },
+    {
+        week: 10,
+        title: "Vecka 10: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 10 här.]",
+        image: getImagePath(10) // "images/vecka_10_gravidkalender.webp"
+    },
+    {
+        week: 11,
+        title: "Vecka 11: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 11 här.]",
+        image: getImagePath(11)
+    },
+    {
+        week: 12,
+        title: "Vecka 12: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 12 här. Första trimesterns slut.]",
+        image: getImagePath(12)
+    },
+    {
+        week: 13,
+        title: "Vecka 13: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 13 här. Andra trimestern börjar.]",
+        image: getImagePath(13)
+    },
+    {
+        week: 14,
+        title: "Vecka 14: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 14 här.]",
+        image: getImagePath(14)
+    },
+    {
+        week: 15,
+        title: "Vecka 15: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 15 här.]",
+        image: getImagePath(15)
+    },
+    {
+        week: 16,
+        title: "Vecka 16: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 16 här.]",
+        image: getImagePath(16)
+    },
+    {
+        week: 17,
+        title: "Vecka 17: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 17 här.]",
+        image: getImagePath(17)
+    },
+    {
+        week: 18,
+        title: "Vecka 18: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 18 här. Fosterrörelser kan kännas.]",
+        image: getImagePath(18)
+    },
+    {
+        week: 19,
+        title: "Vecka 19: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 19 här.]",
+        image: getImagePath(19)
+    },
     {
         week: 20,
-        title: "Vecka 20: Halvvägs!",
-        description: "Du är nu halvvägs genom graviditeten! Fostret är ca 16 cm långt (huvud till stjärt) och väger runt 300 gram. Du kan förmodligen känna fosterrörelser tydligt. Det är vanligt med ultraljud runt denna vecka.",
-        image: "https://via.placeholder.com/400x300.png?text=Vecka+20"
+        title: "Vecka 20: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 20 här. Halvvägs! Ofta rutinultraljud (RUL).]",
+        image: getImagePath(20)
+    },
+    {
+        week: 21,
+        title: "Vecka 21: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 21 här.]",
+        image: getImagePath(21)
+    },
+    {
+        week: 22,
+        title: "Vecka 22: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 22 här.]",
+        image: getImagePath(22)
+    },
+    {
+        week: 23,
+        title: "Vecka 23: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 23 här.]",
+        image: getImagePath(23)
+    },
+    {
+        week: 24,
+        title: "Vecka 24: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 24 här.]",
+        image: getImagePath(24)
+    },
+    {
+        week: 25,
+        title: "Vecka 25: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 25 här.]",
+        image: getImagePath(25)
+    },
+    {
+        week: 26,
+        title: "Vecka 26: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 26 här.]",
+        image: getImagePath(26)
+    },
+    {
+        week: 27,
+        title: "Vecka 27: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 27 här.]",
+        image: getImagePath(27)
+    },
+    {
+        week: 28,
+        title: "Vecka 28: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 28 här. Tredje trimestern börjar.]",
+        image: getImagePath(28)
+    },
+    {
+        week: 29,
+        title: "Vecka 29: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 29 här.]",
+        image: getImagePath(29)
+    },
+    {
+        week: 30,
+        title: "Vecka 30: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 30 här.]",
+        image: getImagePath(30)
+    },
+    {
+        week: 31,
+        title: "Vecka 31: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 31 här.]",
+        image: getImagePath(31)
+    },
+    {
+        week: 32,
+        title: "Vecka 32: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 32 här.]",
+        image: getImagePath(32)
+    },
+    {
+        week: 33,
+        title: "Vecka 33: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 33 här.]",
+        image: getImagePath(33)
+    },
+    {
+        week: 34,
+        title: "Vecka 34: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 34 här.]",
+        image: getImagePath(34)
+    },
+    {
+        week: 35,
+        title: "Vecka 35: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 35 här.]",
+        image: getImagePath(35)
+    },
+    {
+        week: 36,
+        title: "Vecka 36: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 36 här.]",
+        image: getImagePath(36)
+    },
+    {
+        week: 37,
+        title: "Vecka 37: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 37 här. Fostret anses fullgånget.]",
+        image: getImagePath(37)
+    },
+    {
+        week: 38,
+        title: "Vecka 38: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 38 här.]",
+        image: getImagePath(38)
+    },
+    {
+        week: 39,
+        title: "Vecka 39: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 39 här.]",
+        image: getImagePath(39)
     },
     {
         week: 40,
-        title: "Vecka 40: Beräknad födsel",
-        description: "Fostret är fullgånget och redo att födas! De flesta födslar sker mellan vecka 38 och 42. Fostret är nu cirka 50 cm långt och väger i genomsnitt 3,4 kg.",
-        image: "https://via.placeholder.com/400x300.png?text=Vecka+40"
+        title: "Vecka 40: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 40 här. Beräknad födsel.]",
+        image: getImagePath(40)
+    },
+    {
+        week: 41,
+        title: "Vecka 41: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 41 här. Över tiden.]",
+        image: getImagePath(41)
+    },
+    {
+        week: 42,
+        title: "Vecka 42: [Fyll i titel här]",
+        description: "[Fyll i information om vecka 42 här. Maxgräns, igångsättning kan diskuteras.]",
+        image: getImagePath(42)
     }
 ];
 
@@ -65,8 +278,6 @@ function calculateTimeElapsed() {
     const completedWeeks = Math.floor(totalDays / 7);
     const remainingDays = totalDays % 7;
 
-    // Den aktuella graviditetsveckan är antalet slutförda veckor + 1
-    // (t.ex. om 0 veckor och 1 dag har gått, är man i vecka 1)
     const currentPregnancyWeek = completedWeeks + 1;
 
     const timeElapsedElement = document.getElementById('time-elapsed');
@@ -75,36 +286,49 @@ function calculateTimeElapsed() {
     if (remainingDays === 1) outputString = outputString.replace("dagar", "dag");
     timeElapsedElement.textContent = `Du är i vecka ${currentPregnancyWeek}. (${outputString} har förflutit)`;
 
-    // Visa information för aktuell vecka
     const weekTitleElement = document.getElementById('week-title');
     const weekImageElement = document.getElementById('week-image');
     const weekDescriptionElement = document.getElementById('week-description');
 
-    // Hitta informationen för den aktuella graviditetsveckan
     const weekData = pregnancyInfo.find(info => info.week === currentPregnancyWeek);
 
-    if (startDate > currentDate) { // Om startdatumet är i framtiden
+    if (startDate > currentDate) {
         weekTitleElement.textContent = "Graviditeten har inte börjat än";
-        weekImageElement.src = "https://via.placeholder.com/400x300.png?text=Väntar...";
+        // Du kan ha en specifik platshållarbild för "väntar"-status
+        weekImageElement.src = "images/placeholder_waiting.webp";
         weekImageElement.alt = "Väntar";
         weekDescriptionElement.textContent = "Kom tillbaka när startdatumet har passerats.";
-    } else if (weekData) {
-        weekTitleElement.textContent = weekData.title;
-        weekImageElement.src = weekData.image; // Använder länken från datan
-        weekImageElement.alt = weekData.title; // Bra för tillgänglighet
-        weekDescriptionElement.textContent = weekData.description;
-    } else if (currentPregnancyWeek > pregnancyInfo[pregnancyInfo.length -1].week) { // Efter sista definierade veckan
-        weekTitleElement.textContent = "Efter beräknad födsel";
-        weekImageElement.src = "https://via.placeholder.com/400x300.png?text=Grattis%3F";
-        weekImageElement.alt = "Efter beräknad födsel";
-        weekDescriptionElement.textContent = `Graviditeten har passerat vecka ${pregnancyInfo[pregnancyInfo.length -1].week}. Om barnet inte har kommit än, kontakta din barnmorska.`;
-    }
-    else {
-        weekTitleElement.textContent = `Information för vecka ${currentPregnancyWeek}`;
-        weekImageElement.src = "https://via.placeholder.com/400x300.png?text=Info+saknas";
-        weekImageElement.alt = `Information saknas för vecka ${currentPregnancyWeek}`;
-        weekDescriptionElement.textContent = "Information för denna vecka har inte lagts till ännu.";
+        document.getElementById('current-week-info').style.display = 'none';
+    } else {
+        document.getElementById('current-week-info').style.display = 'block';
+        if (weekData) {
+            weekTitleElement.textContent = weekData.title;
+            weekImageElement.src = weekData.image; // Använder nu det nya formatet
+            weekImageElement.alt = weekData.title;
+            weekDescriptionElement.textContent = weekData.description;
+
+            weekImageElement.onerror = function() {
+                this.onerror=null;
+                this.src='https://via.placeholder.com/400x300.webp?text=Bild+saknas+för+vecka+' + currentPregnancyWeek;
+                this.alt = 'Bild saknas för vecka ' + currentPregnancyWeek;
+            };
+
+        } else if (currentPregnancyWeek > 0 && pregnancyInfo.length > 0 && currentPregnancyWeek > pregnancyInfo[pregnancyInfo.length -1].week) {
+            weekTitleElement.textContent = "Efter beräknad födsel (Vecka " + currentPregnancyWeek + ")";
+            // Du kan ha en specifik bild för "efter födsel"
+            weekImageElement.src = "images/placeholder_after.webp";
+            weekImageElement.alt = "Efter beräknad födsel";
+            weekDescriptionElement.textContent = `Graviditeten har passerat vecka ${pregnancyInfo[pregnancyInfo.length -1].week}. Om barnet inte har kommit än, kontakta din barnmorska.`;
+            weekImageElement.onerror = function() { this.onerror=null; this.src='https://via.placeholder.com/400x300.webp?text=Grattis%3F'; };
+        }
+        else {
+            weekTitleElement.textContent = `Information för vecka ${currentPregnancyWeek}`;
+            weekImageElement.src = 'https://via.placeholder.com/400x300.webp?text=Info+saknas+för+vecka+' + currentPregnancyWeek;
+            weekImageElement.alt = `Information saknas för vecka ${currentPregnancyWeek}`;
+            weekDescriptionElement.textContent = "Information för denna vecka har inte lagts till ännu i mallen.";
+        }
     }
 }
 
+// Kör funktionen när sidan har laddats
 calculateTimeElapsed();
