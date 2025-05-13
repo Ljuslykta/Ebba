@@ -47,8 +47,8 @@ const pregnancyInfo = [
         week: 6,
         title: "Vecka 6: Larger than life",
         description: "Embryot är nu cirka fyra millimeter lång. Nu utvecklas armar och ben. De inre organen bildas, till exempel magsäck, tarmar och njurar. Hjärnan, ryggmärgen, ryggkotorna och det centrala nervsystemet fortsätter att utvecklas.Fosterhinnorna har bildats. Än så länge finns nästan inget fostervatten.",
-        image: getImagePath(6)
-        youtubeVideoId: "[MEb2CecR11I]"
+        image: getImagePath(6),
+        youtubeVideoId: "MEb2CecR11I"
     },
     {
         week: 7,
