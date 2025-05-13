@@ -15,44 +15,44 @@ function getImagePath(weekNumber) {
 const pregnancyInfo = [
     {
         week: 1,
-        title: "Vecka 1: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 1 här. Detta är ofta veckan för sista menstruationen.]",
+        title: "Vecka 1: Innan starten",
+        description: "Innan graviditeten startar",
         image: getImagePath(1) // "images/vecka_01_gravidkalender.webp"
     },
     {
         week: 2,
-        title: "Vecka 2: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 2 här. Ägglossning kan ske.]",
+        title: "Vecka 2: Befruktningen",
+        description: "Själva befruktningen skedde förmodlingen i slutet av den här veckan.",
         image: getImagePath(2)
     },
     {
         week: 3,
-        title: "Vecka 3: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 3 här. Befruktning och implantation.]",
+        title: "Vecka 3: Implantationen",
+        description: "Nu fästs ägget i livmodern..",
         image: getImagePath(3)
     },
     {
         week: 4,
-        title: "Vecka 4: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 4 här. Embryot utvecklas, mensen kan utebli.]",
+        title: "Vecka 4: Moderkakan",
+        description: "Nu finns två typer av celler, dels det som kommer bli barnet och de som kommer bli moderkakan.",
         image: getImagePath(4)
     },
     {
         week: 5,
-        title: "Vecka 5: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 5 här. Hjärtat kan börja slå.]",
+        title: "Vecka 5: Tre lager",
+        description: "Embryot som ska utvecklas till ett foster är nu ungefär en millimeter lång. Embryot består av tre lager med celler. Lagren kommer att bli till olika delar av kroppen. Det översta lagret celler kommer bland annat att bli hjärnan, nervsystemet och huden. Mellanlagret kommer att bli ben, muskler, blodkärl och brosk. Det undre lagret kommer att bilda magsäcken, tarmarna och levern. Nu börjar själva organbildningen",
         image: getImagePath(5)
     },
     {
         week: 6,
-        title: "Vecka 6: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 6 här.]",
+        title: "Vecka 6: Fortsatt tillväxt",
+        description: "Embryot är nu cirka fyra millimeter lång. Nu utvecklas armar och ben. De inre organen bildas, till exempel magsäck, tarmar och njurar. Hjärnan, ryggmärgen, ryggkotorna och det centrala nervsystemet fortsätter att utvecklas.Fosterhinnorna har bildats. Än så länge finns nästan inget fostervatten.",
         image: getImagePath(6)
     },
     {
         week: 7,
-        title: "Vecka 7: [Fyll i titel här]",
-        description: "[Fyll i information om vecka 7 här.]",
+        title: "Vecka 7: Ögonen tittar fram",
+        description: "Embryot är ungefär åtta millimeter lång. Det som ska bli ögon syns som två gropar på var sin sida av huvudet. Ett veck som ska täcka ögat håller på att växa fram. På sidorna av huvudet sitter också några små knoppar. Knopparna ska senare bilda ytterörat. Näsan håller på att utvecklas. Det bildas brosk som kommer att bli till skelettet. Mun och näsa har fortfarande ett gemensamt hål. Där börjar tungan ta form.Armarna och benen växer fram. Händerna börjar synas som små paddlar. Så här tidigt har embryot något som liknar en svans. Den försvinner i vecka 9. Embryot har börjat bilda blod. Hjärtat pumpar runt blodet i de blodkärl som redan har utvecklats.",
         image: getImagePath(7)
     },
     {
@@ -284,7 +284,7 @@ function calculateTimeElapsed() {
     let outputString = `${completedWeeks} + ${remainingDays}`;
     if (completedWeeks === 1) outputString = outputString.replace("veckor", "vecka");
     if (remainingDays === 1) outputString = outputString.replace("dagar", "dag");
-    timeElapsedElement.textContent = `(${outputString})`;
+    timeElapsedElement.textContent = `Vecka ${outputString}`;
 
     const weekTitleElement = document.getElementById('week-title');
     const weekImageElement = document.getElementById('week-image');
