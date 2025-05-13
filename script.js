@@ -281,10 +281,10 @@ function calculateTimeElapsed() {
     const currentPregnancyWeek = completedWeeks + 1;
 
     const timeElapsedElement = document.getElementById('time-elapsed');
-    let outputString = `${completedWeeks} fullgångna veckor och ${remainingDays} dagar`;
+    let outputString = `${completedWeeks} + ${remainingDays}`;
     if (completedWeeks === 1) outputString = outputString.replace("veckor", "vecka");
     if (remainingDays === 1) outputString = outputString.replace("dagar", "dag");
-    timeElapsedElement.textContent = `Du är i vecka ${currentPregnancyWeek}. (${outputString} har förflutit)`;
+    timeElapsedElement.textContent = `(${outputString})`;
 
     const weekTitleElement = document.getElementById('week-title');
     const weekImageElement = document.getElementById('week-image');
