@@ -22,7 +22,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            max-width: 600px; /* Begränsa bredden */
+            max-width: 700px; /* Anpassad för video */
             width: 90%;
         }
         h1 {
@@ -45,15 +45,6 @@
             color: #4682b4; /* Stålblå */
             margin-top: 0;
         }
-
-<iframe id="week-video"  ß <!-- KONTROLLERA DETTA ID! -->
-        src=""
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-</iframe>
-
-
         .week-info img {
             max-width: 100%;
             height: auto;
@@ -65,8 +56,9 @@
         .week-info p {
             line-height: 1.6;
             color: #444;
+            white-space: pre-line; /* Gör att \n eller faktiska radbrytningar i JS-strängar (med backticks) renderas */
         }
-         .youtube-player-container {
+        .youtube-player-container {
             margin-top: 25px;
             padding-top: 20px;
             border-top: 1px dashed #ddd;
@@ -103,14 +95,32 @@
 <body>
     <div class="container">
         <h1>Graviditetskalender</h1>
+        <p>Baserat på startdatum (vanligtvis sista mensens första dag):</p>
         <div id="time-elapsed">Räknar...</div>
 
         <div class="week-info" id="current-week-info">
             <h2 id="week-title">Information för aktuell vecka</h2>
-            <img id="week-image" src="https://via.placeholder.com/400x300.png?text=Väntar+på+vecka..." alt="Bild för aktuell vecka">
+            <img id="week-image" src="https://via.placeholder.com/400x300.webp?text=Väntar+på+vecka..." alt="Bild för aktuell vecka">
             <p id="week-description">Laddar information...</p>
+
+            <!-- YouTube Player Container -->
+            <div class="youtube-player-container" id="youtube-container" style="display: none;">
+                <h3>Veckans video:</h3>
+                <div class="youtube-player-wrapper">
+                    <iframe id="week-video"
+                            src=""
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
     </div>
+
+    <p class="footer-note">
+        All information är generell. Konsultera alltid din barnmorska eller läkare för personlig rådgivning.
+    </p>
 
     <script src="script.js"></script>
 </body>
