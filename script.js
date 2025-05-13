@@ -293,6 +293,10 @@ function calculateTimeElapsed() {
 
     const weekData = pregnancyInfo.find(info => info.week === currentPregnancyWeek);
 
+
+    weekVideoElement.src = "";
+    youtubeContainer.style.display = 'none';
+
     if (startDate > currentDate) {
         weekTitleElement.textContent = "Graviditeten har inte börjat än";
         // Du kan ha en specifik platshållarbild för "väntar"-status
@@ -313,6 +317,11 @@ function calculateTimeElapsed() {
                 this.src='https://via.placeholder.com/400x300.webp?text=Bild+saknas+för+vecka+' + currentPregnancyWeek;
                 this.alt = 'Bild saknas för vecka ' + currentPregnancyWeek;
             };
+
+ if (weekData.youtubeVideoId && weekData.youtubeVideoId.trim() !== "" && !weekData.youtubeVideoId.startsWith("[")) { // Kollar att det inte är en platshållare
+                weekVideoElement.src = `https://www.youtube.com/embed/${weekData.youtubeVideoId}`;
+                youtubeContainer.style.display = 'block'; // Visa spelaren
+            }
 
         } else if (currentPregnancyWeek > 0 && pregnancyInfo.length > 0 && currentPregnancyWeek > pregnancyInfo[pregnancyInfo.length -1].week) {
             weekTitleElement.textContent = "Efter beräknad födsel (Vecka " + currentPregnancyWeek + ")";
