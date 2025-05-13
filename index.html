@@ -1,45 +1,86 @@
-      
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tid sedan Startdatum</title>
+    <title>Graviditetsvecka</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Stapla element vertikalt */
             align-items: center;
-            min-height: 100vh; /* Fyller hela skärmhöjden */
+            min-height: 100vh;
             text-align: center;
-            background-color: #f4f4f4; /* Ljusgrå bakgrund */
-            margin: 0;
+            background-color: #f0f8ff; /* Ljusblå bakgrund (aliceblue) */
+            margin: 20px;
+            color: #333;
         }
         .container {
-            background-color: #fff; /* Vit bakgrund för innehåll */
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Mjuk skugga */
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            max-width: 600px; /* Begränsa bredden */
+            width: 90%;
         }
         h1 {
-            color: #333; /* Mörkgrå rubrik */
-            margin-bottom: 20px;
+            color: #ff69b4; /* Rosa för en "babykänsla" */
+            margin-bottom: 10px;
         }
         #time-elapsed {
-            font-size: 1.5em; /* Större text för resultatet */
-            color: #555; /* Mellangrå text */
+            font-size: 1.4em;
+            color: #555;
             font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .week-info {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 20px;
+            text-align: left; /* Bättre för längre text */
+        }
+        .week-info h2 {
+            color: #4682b4; /* Stålblå */
+            margin-top: 0;
+        }
+        .week-info img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .week-info p {
+            line-height: 1.6;
+            color: #444;
+        }
+        .footer-note {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Tid som förflutit sedan startdatumet</h1>
+        <h1>Graviditetskalender</h1>
+        <p>Baserat på startdatum (vanligtvis sista mensens första dag):</p>
         <div id="time-elapsed">Räknar...</div>
+
+        <div class="week-info" id="current-week-info">
+            <h2 id="week-title">Information för aktuell vecka</h2>
+            <img id="week-image" src="https://via.placeholder.com/400x300.png?text=Väntar+på+vecka..." alt="Bild för aktuell vecka">
+            <p id="week-description">Laddar information...</p>
+        </div>
     </div>
 
-    <!-- Länka till JavaScript-filen -->
+    <p class="footer-note">
+        All information är generell. Konsultera alltid din barnmorska eller läkare för personlig rådgivning.
+    </p>
+
     <script src="script.js"></script>
 </body>
 </html>
