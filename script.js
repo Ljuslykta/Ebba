@@ -52,9 +52,10 @@ const pregnancyInfo = [
     },
     {
         week: 7,
-        title: "Vecka 7: Ögonen tittar fram",
+        title: "Vecka 7: I can see clearly now",
         description: "Embryot är ungefär åtta millimeter lång. Det som ska bli ögon syns som två gropar på var sin sida av huvudet. Ett veck som ska täcka ögat håller på att växa fram. På sidorna av huvudet sitter också några små knoppar. Knopparna ska senare bilda ytterörat. Näsan håller på att utvecklas. Det bildas brosk som kommer att bli till skelettet. Mun och näsa har fortfarande ett gemensamt hål. Där börjar tungan ta form.Armarna och benen växer fram. Händerna börjar synas som små paddlar. Så här tidigt har embryot något som liknar en svans. Den försvinner i vecka 9. Embryot har börjat bilda blod. Hjärtat pumpar runt blodet i de blodkärl som redan har utvecklats.",
-        image: getImagePath(7)
+        image: getImagePath(7),
+        youtubeVideoId: "b0cAWgTPiwM"
     },
     {
         week: 8,
