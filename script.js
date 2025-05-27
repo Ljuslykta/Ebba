@@ -61,7 +61,8 @@ const pregnancyInfo = [
         week: 8,
         title: "Vecka 8: I like to move it",
         description: "Embryot är ungefär en och en halv centimeter lång i slutet av veckan. Än så länge mäts längden som en rak linje från huvudet till stjärten. Nu kan embryot göra enkla rörelser. Armen har fått en armbåge. På händerna börjar fingrarna växa. Det är simhud mellan fingrarna. Tårna börjar utvecklas. Ögonen håller på att få ögonlock. Än så länge sitter ögonen långt ut på sidan av huvudet. I munnen bildas gommen, tungan och anlag för tänder. En liten del av tarmen ligger i navelsträngen strax utanför magen. Det beror på att tarmarna växer så snabbt att de inte får plats inne i kroppen än. Nu växer livmodern och blir lika stor som en apelsin, men den går ännu inte att känna utifrån. Det kan kännas som mensvärk när den växer och tar plats. Många kan behöva kissa oftare än vanligt. En orsak kan vara att livmodern trycker mot urinblåsan.",
-        image: getImagePath(8)
+        image: getImagePath(8),
+        youtubeVideoId: "hdcTmpvDO0I"
     },
     {
         week: 9,
