@@ -66,9 +66,10 @@ const pregnancyInfo = [
     },
     {
         week: 9,
-        title: "Vecka 9: I like to nose it",
+        title: "Vecka 9: Smells like teen spirit",
         description: "Embryot är nu runt två centimeter lång. Det börjar få ett ansikte med ögon och öron. Huvudet har fått en nacke. Anlagen till näsan börjar synas. Fingrarna har växt ut längre. Det har tidigare varit simhud mellan fingrarna, men det börjar nu att försvinna. Tårna håller också på att utvecklas. Den svans som tidigare fanns i embryots ryggslut försvinner nu. De inre delarna av könsorganen finns redan. Fostret har antingen äggstockar eller testiklar. Det yttre könsorganet ser nu i början likadant ut hos alla foster.",
-        image: getImagePath(9)
+        image: getImagePath(9),
+        youtubeVideoId: "hTWKbfoikeg"
     },
     {
         week: 10,
