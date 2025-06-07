@@ -9,8 +9,8 @@ function getImagePath(weekNumber) {
 }
 
 const pregnancyInfo = [
-    { week: 1, title: "Vecka 1: Innan starten", description: "Innan graviditeten startar", image: getImagePath(1) },
-    { week: 2, title: "Vecka 2: Befruktningen", description: "Själva befruktningen skedde förmodlingen i slutet av den här veckan.", image: getImagePath(2) },
+    { week: 1, title: "Vecka 1: I'm into something good'", description: "Innan graviditeten startar", image: getImagePath(1) },
+    { week: 2, title: "Vecka 2: Take my breath away", description: "Själva befruktningen skedde förmodlingen i slutet av den här veckan.", image: getImagePath(2) },
     { week: 3, title: "Vecka 3: Implantationen", description: "Nu fästs ägget i livmodern..", image: getImagePath(3) },
     { week: 4, title: "Vecka 4: Moderkakan", description: "Nu finns två typer av celler, dels det som kommer bli barnet och de som kommer bli moderkakan.", image: getImagePath(4) },
     { week: 5, title: "Vecka 5: Tre lager", description: "Embryot som ska utvecklas till ett foster är nu ungefär en millimeter lång. Embryot består av tre lager med celler. Lagren kommer att bli till olika delar av kroppen. Det översta lagret celler kommer bland annat att bli hjärnan, nervsystemet och huden. Mellanlagret kommer att bli ben, muskler, blodkärl och brosk. Det undre lagret kommer att bilda magsäcken, tarmarna och levern. Nu börjar själva organbildningen", image: getImagePath(5) },
@@ -106,8 +106,15 @@ function displayWeekInfo(weekNumber) {
     }
 
     // Uppdatera knapparnas status
-    prevWeekBtn.disabled = (displayedWeek <= 1);
-    nextWeekBtn.disabled = (displayedWeek >= pregnancyInfo.length);
+prevWeekBtn.disabled = (displayedWeek <= 1);
+
+    // Dölj "Nästa vecka"-knappen om vi är på den nuvarande veckan (eller senare)
+    if (displayedWeek >= currentPregnancyWeek) {
+        nextWeekBtn.style.display = 'none';
+    } else {
+        // Annars, se till att den visas (om vi har gått tillbaka från den nuvarande veckan)
+        nextWeekBtn.style.display = 'block';
+    }
 }
 
 // ---- NYTT: Funktion som körs när sidan laddas ----
