@@ -110,10 +110,10 @@ prevWeekBtn.disabled = (displayedWeek <= 1);
 
     // Dölj "Nästa vecka"-knappen om vi är på den nuvarande veckan (eller senare)
     if (displayedWeek >= currentPregnancyWeek) {
-        nextWeekBtn.style.display = 'none';
+        nextWeekBtn.style.display = 'block';
     } else {
         // Annars, se till att den visas (om vi har gått tillbaka från den nuvarande veckan)
-        nextWeekBtn.style.display = 'block';
+        nextWeekBtn.style.display = 'none';
     }
 }
 
