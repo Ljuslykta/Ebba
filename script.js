@@ -1,5 +1,5 @@
 // --- *** ÄNDRA DETTA DATUM *** ---
-const startDate = new Date('2025-04-08');
+const startDate = new Date('2025-04-06');
 // ---------------------------------
 
 // Samma data som förut... (hela pregnancyInfo-arrayen)
