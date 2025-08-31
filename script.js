@@ -5,7 +5,7 @@ const startDate = new Date('2025-04-06');
 // Samma data som förut... (hela pregnancyInfo-arrayen)
 function getImagePath(weekNumber) {
     const paddedWeek = weekNumber.toString().padStart(2, '0');
-    return `images/vecka_${paddedWeek}_gravidkalender.webp`;
+    return `images/vecka_${paddedWeek}_gravidkalendern.webp`;
 }
 
 const pregnancyInfo = [
